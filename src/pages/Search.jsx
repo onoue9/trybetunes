@@ -48,7 +48,6 @@ const Search = () => {
               disabled
             >Pesquisar</button>
           </form> }
-          { console.log(albums) }
           { albums.length <= 0 ? <strong className="mt-20">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20">
               <span className="text-lg mb-14"><strong>Resultado de álbuns de:</strong> { search.current }</span>
               <div className="grid grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
