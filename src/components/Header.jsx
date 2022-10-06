@@ -35,7 +35,7 @@ const Header = () => {
         ><strong>Profile</strong></Link>
         <Link
           className="flex items-center justify-center text-lg w-full h-full rounded-md hover:bg-emerald-300 border-black shadow"
-          to="/"
+          to="/trybetunes/"
         ><strong>Sair</strong></Link>
       </div>
     </header>
