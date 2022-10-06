@@ -17,7 +17,7 @@ const App = () => {
     <BrowserRouter>
       <Context.Provider value={[isLoading, setIsLoading]}>
         <Routes>
-          <Route path="/trybetunes/" element={<Login />} />
+          <Route path="/trybetunes" element={<Login />} />
           <Route path="/search" element={<Search />} />
           <Route path="/album/:id" element={<Album />}/>
           <Route path="/favorites" element={<Favorites />}/>
