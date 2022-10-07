@@ -35,7 +35,7 @@ const Album = () => {
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 w-2/3 h-1/2 items-center justify-center">
+        <div className="grid sm:grid-cols-3 gap-4 w-2/3 h-1/2 items-center justify-center">
           { album.map((music, index) => { if (music.trackName) {
             return (
               <MusicCard

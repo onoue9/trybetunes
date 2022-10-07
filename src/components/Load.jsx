@@ -1,6 +1,11 @@
+import { CircleNotch } from "phosphor-react";
+
 const Load = () => (
-  <div>
-    <h1>Carregando...</h1>
+  <div className="flex items-center justify-center">
+    <CircleNotch
+      className="animate-spin"
+      size={32}
+    />
   </div>
 )
 

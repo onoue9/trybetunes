@@ -33,15 +33,15 @@ const Login = () => {
 
   return (
     <div
-      className="flex flex-col items-center justify-evenly h-screen w-screen"
+      className="flex flex-col items-center justify-center h-screen w-screen"
     >
-      <div className="flex flex-col items-center justify-evenly h-1/2 w-1/3">
-        <div className="w-4/5 h-1/2 items-center pb-32 rounded-lg flex justify-center">
-          <h1 className="text-6xl text-gray-800"><strong>TrybeTunes</strong></h1>
+      <div className="flex flex-col items-center justify-center w-full sm:h-1/2 sm:w-1/3">
+        <div className="w-full sm:w-4/5 sm:h-1/2 flex items-center justify-center mb-10">
+          <strong className="text-5xl sm:text-6xl text-gray-800">TrybeTunes</strong>
         </div>
         
           { isLoading ? <Load /> : <form
-            className="flex flex-col items-center gap-3 text-gray-800 pb-10"
+            className="flex flex-col items-center gap-3 text-gray-800 pb-10 pr-5"
             onSubmit={ handleCreateUser }
             >
             <label htmlFor="nome"><strong className="text-lg">Login</strong></label>
@@ -52,7 +52,7 @@ const Login = () => {
               onChange={ handleName }
             />
             <button
-              className="bg-emerald-500 rounded-md w-1/2 h-8 mt-2 hover:bg-emerald-600"
+              className="bg-white rounded-md w-1/2 h-8 mt-2"
               ref={loginButton}
               type="submit"
               disabled

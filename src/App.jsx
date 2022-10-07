@@ -23,7 +23,7 @@ const App = () => {
           <Route path="/favorites" element={<Favorites />}/>
           <Route path="/profile" element={<Profile />}/>
           <Route path="/profile/edit" element={<ProfileEdit />}/>
-          <Route element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Context.Provider>
     </BrowserRouter>

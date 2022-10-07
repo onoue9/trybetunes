@@ -37,7 +37,7 @@ const Search = () => {
                 className="text-center rounded-md h-8"
                 ref={ searchInput }
                 type="text"
-                placeholder="Search"
+                placeholder="Buscar"
                 onChange={ handleChange }
               />
             </label>
@@ -46,11 +46,11 @@ const Search = () => {
               ref={ button }
               type="submit"
               disabled
-            >Pesquisar</button>
+            >Buscar</button>
           </form> }
-          { albums.length <= 0 ? <strong className="mt-20">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20">
+          { albums.length <= 0 ? <strong className="mt-20">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20 mb-4">
               <span className="text-lg mb-14"><strong>Resultado de álbuns de:</strong> { search.current }</span>
-              <div className="grid grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
+              <div className="grid sm:grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
                 { albums.map((album) => (
                   <div
                     className="w-full h-full flex flex-col gap-2 pt-2 items-center justify-center bg-gray-200 rounded-md text-center hover:bg-gray-300"
