@@ -15,26 +15,26 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex flex-col justify-center w-screen">
-      <div className="h-10 sm:h-16 flex items-center border-black shadow justify-around">
+    <header className="flex flex-col justify-center w-1/2 self-center text-zinc-200">
+      <div className="h-10 sm:h-16 flex items-center justify-around">
         <strong className="text-2xl">TrybeTunes</strong>
         { !user ? <Load /> : <strong className="text-lg">{ user }</strong> }
       </div>
       <div className="h-10 flex text-center">
         <Link
-          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-md hover:bg-emerald-300 border-black shadow"
+          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-lg hover:bg-fuchsia-800 hover:bg-opacity-50 transition"
           to="/search"
         ><strong>Buscar</strong></Link>
         <Link
-          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-md hover:bg-emerald-300 border-black shadow"
+          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-lg hover:bg-fuchsia-800 hover:bg-opacity-50 transition"
           to="/favorites"
         ><strong>Favoritas</strong></Link>
         <Link
-          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-md hover:bg-emerald-300 border-black shadow"
+          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-lg hover:bg-fuchsia-800 hover:bg-opacity-50 transition"
           to="/profile"
         ><strong>Perfil</strong></Link>
         <Link
-          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-md hover:bg-emerald-300 border-black shadow"
+          className="flex items-center justify-center text-md w-1/4 sm:w-full h-full rounded-lg hover:bg-fuchsia-800 hover:bg-opacity-50 transition"
           to="/trybetunes"
         ><strong>Sair</strong></Link>
       </div>

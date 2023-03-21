@@ -15,10 +15,10 @@ const Favorites = () => {
   }, [favoriteSongs])
 
   return (
-    <div className="w-screen h-screen">
+    <div className="flex flex-col items-center w-screen h-screen">
       <Header />
-      <strong className="flex items-center justify-center mt-20 text-2xl">Favoritas</strong>
-      <div className="flex items-center justify-center mt-20">
+      <strong className="flex items-center justify-center mt-20 text-2xl text-zinc-200">Favoritas</strong>
+      <div className="flex items-center justify-center mt-20 text-zinc-200">
       { favoriteSongs.length <= 0 ? <strong className="text-center">
         Não há músicas favoritas
         </strong> : <div className="grid sm:grid-cols-3 gap-4 w-2/3 h-1/2 items-center justify-center">

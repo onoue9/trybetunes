@@ -26,9 +26,9 @@ const Search = () => {
   }
 
   return (
-    <div className="w-screen h-screen flex flex-col gap-2">
+    <div className="w-screen h-screen flex flex-col gap-1">
       <Header />
-      { isLoading ? <Load /> : <div className="flex flex-col items-center justify-evenly mt-20">
+      { isLoading ? <Load /> : <div className="flex flex-col items-center justify-evenly shadow-lg pt-10 w-1/2 h-screen self-center">
           { albums.length < 0 ? <Load /> : <form
             className="flex flex-col gap-4 items-center"
             onSubmit={ handleSearch }>
@@ -42,25 +42,25 @@ const Search = () => {
               />
             </label>
             <button
-              className="bg-emerald-600 rounded-md w-1/2 h-8 mt-2 hover:bg-emerald-700"
+              className="bg-fuchsia-700 bg-opacity-50 rounded-md w-1/2 h-8 mt-2 hover:bg-fuchsia-800 text-zinc-200"
               ref={ button }
               type="submit"
               disabled
             >Buscar</button>
           </form> }
-          { albums.length <= 0 ? <strong className="mt-20">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20 mb-4">
-              <span className="text-lg mb-14"><strong>Resultado de álbuns de:</strong> { search.current }</span>
+          { albums.length <= 0 ? <strong className="mt-20 text-zinc-200">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20 mb-4">
+              <span className="text-lg mb-14 text-zinc-200"><strong>Resultado de álbuns de:</strong> { search.current }</span>
               <div className="grid sm:grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
                 { albums.map((album) => (
                   <div
-                    className="w-full h-full flex flex-col gap-2 pt-2 items-center justify-center bg-gray-200 rounded-md text-center hover:bg-gray-300"
+                    className="flex flex-col gap-2 items-center justify-center rounded-md"
                     key={ album.collectionId }
                   >
-                    <img className="rounded-md"src={ album.artworkUrl100 } alt={ album.collectionName } />
                     <Link
                       to={ `/album/${album.collectionId}` }s
                     >
-                      <h2 className="text-lg">{ album.collectionName }</h2>
+                    <img className="rounded-md"src={ album.artworkUrl100 } alt={ album.collectionName } />
+                      {/* <h2 className="text-lg">{ album.collectionName }</h2> */}
                     </ Link>
                   </div>
                 ))}

@@ -50,15 +50,15 @@ const ProfileEdit = () => {
   }
 
   return (
-    <div className="w-screen h-screen">
+    <div className="flex flex-col items-center w-screen h-screen">
       <Header />
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center text-zinc-200">
         <strong className="flex items-center justify-center my-20 text-2xl">Editar Perfil</strong>
         { !user ? <Load /> : <div className="flex flex-col">
           <form className="flex flex-col gap-2 items-center justify-center"onSubmit={ handleUpdateUser }>
             <label htmlFor="name">Nome</label>
             <input
-              className="w-40 rounded-md text-center"
+              className="w-40 h-8 rounded-md text-center"
               type="text"
               name="name"
               value={ user.name }
@@ -66,7 +66,7 @@ const ProfileEdit = () => {
             />
             <label htmlFor="email">Email</label>
             <input
-              className="w-40 rounded-md text-center"
+              className="w-40 h-8 rounded-md text-center"
               type="email"
               name="email"
               value={ user.email }
@@ -82,14 +82,14 @@ const ProfileEdit = () => {
             />
             <label htmlFor="image">Imagem (URL)</label>
             <input
-              className="w-40 rounded-md text-center"
+              className="w-40 h-8 rounded-md text-center"
               type="text"
               name="image"
               value={ user.image }
               onChange={ handleChange }
             />
             <button
-              className="w-20 mt-5 bg-emerald-600 rounded-md"
+              className="w-20 h-8 mt-5 bg-fuchsia-700 bg-opacity-50 hover:bg-fuchsia-800 rounded-md"
               ref={ editButton }
               disabled
             >Salvar</button>

@@ -44,10 +44,10 @@ const MusicCard = (props) => {
   }
 
   return (
-    <div className="h-full flex flex-col gap-2 mb-4 items-center justify-center bg-emerald-400 rounded-md text-center">
+    <div className="h-full flex flex-col gap-2 mb-4 items-center justify-center rounded-md text-center text-zinc-200">
       <strong className="m-2">{ musicName }</strong>
       <audio
-        className="m-2"
+        className="w-[99%]"
         src={ previewUrl }
         controls
       >

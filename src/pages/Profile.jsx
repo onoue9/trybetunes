@@ -15,16 +15,16 @@ const Profile = () => {
   }, [])
 
   return (
-    <div className="w-screen h-screen">
+    <div className="flex flex-col items-center w-screen h-screen">
       <Header />
-      <strong className="flex items-center justify-center my-20 text-2xl">Perfil</strong>
+      <strong className="flex items-center justify-center my-20 text-2xl text-zinc-200">Perfil</strong>
       <div className="flex flex-col items-center justify-center">
-        { !user ? <Load /> : <div className="w-1/2 h-full flex flex-col gap-5 items-center justify-center bg-gray-200 rounded-md">
+        { !user ? <Load /> : <div className="w-full h-full flex flex-col gap-5 items-center justify-center rounded-md text-zinc-200">
             <img className="rounded-md" src={ user.image } alt="user image" />
             <strong className="text-2xl">{ user.name }</strong>
             <h2>Email: { user.email }</h2>
             <p>Descrição: { user.description }</p>
-            <Link className="w-32 text-center mb-10 bg-gray-300 hover:bg-gray-400 rounded-md" to="/profile/edit">Editar perfil</Link>
+            <Link className="flex justify-center items-center bg-fuchsia-700 bg-opacity-50 hover:bg-fuchsia-800 w-32 h-8 text-center mb-10 rounded-md" to="/profile/edit">Editar perfil</Link>
           </div>
         }
       </div>
