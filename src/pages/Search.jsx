@@ -28,7 +28,7 @@ const Search = () => {
   return (
     <div className="w-screen h-screen flex flex-col gap-1">
       <Header />
-      { isLoading ? <Load /> : <div className="flex flex-col items-center justify-evenly shadow-lg pt-10 w-1/2 h-screen self-center">
+      { isLoading ? <Load /> : <div className="flex flex-col items-center justify-evenly shadow-lg pt-10 w-full sm:w-1/2 h-screen self-center">
           { albums.length < 0 ? <Load /> : <form
             className="flex flex-col gap-4 items-center"
             onSubmit={ handleSearch }>
@@ -50,7 +50,7 @@ const Search = () => {
           </form> }
           { albums.length <= 0 ? <strong className="mt-20 text-zinc-200">Nenhum álbum foi encontrado</strong> : <div className="h-full flex flex-col gap-2 items-center mt-20 mb-4">
               <span className="text-lg mb-14 text-zinc-200"><strong>Resultado de álbuns de:</strong> { search.current }</span>
-              <div className="grid sm:grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
+              <div className="grid grid-cols-5 gap-4 w-2/3 h-1/2 items-center justify-center">
                 { albums.map((album) => (
                   <div
                     className="flex flex-col gap-2 items-center justify-center rounded-md"

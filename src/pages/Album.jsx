@@ -21,7 +21,7 @@ const Album = () => {
   return (
   <div className="flex flex-col items-center w-screen h-screen">
     <Header />
-    { album.length <= 0 ? <Load /> : <div className="flex flex-col items-center mt-5 gap-10 w-1/2">
+    { album.length <= 0 ? <Load /> : <div className="flex flex-col items-center mt-5 gap-10 w-full h-screen sm:w-1/2 overflow-auto">
         <div className="flex text-zinc-200 gap-10">
           <div>
             <img className="rounded-md" src={ album[0].artworkUrl100 } alt={ album[0].collectionName } />
@@ -35,7 +35,7 @@ const Album = () => {
             </h2>
           </div>
         </div>
-        <div className="grid sm:grid-cols-3 gap-4 w-full h-1/2 items-center justify-center">
+        <div className="grid grid-cols-2 px-3 gap-4 w-full h-1/2 items-center justify-center">
           { album.map((music, index) => { if (music.trackName) {
             return (
               <MusicCard
