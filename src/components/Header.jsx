@@ -15,7 +15,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="flex flex-col justify-center sm:w-1/2 h-[20%] self-center text-zinc-200 gap-5">
+    <header className="flex flex-col justify-center sm:mt-5 sm:w-1/2 h-[20%] self-center text-zinc-200 gap-5">
       <div className="h-10 sm:h-16 flex flex-col items-center justify-around">
         <strong className="text-2xl">TrybeTunes</strong>
         { !user ? <Load /> : <strong className="text-lg text-fuchsia-300">{ user }</strong> }
